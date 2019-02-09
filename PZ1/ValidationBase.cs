@@ -17,11 +17,21 @@ namespace PZ1
         }
 
         protected abstract void ValidateSelf();
+        protected abstract void ValidateRegister();
 
         public void Validate()
         {
             this.ValidationErrors.Clear();
             this.ValidateSelf();
+            this.IsValid = this.ValidationErrors.IsValid;
+            this.RaisePropertyChanged("IsValid");
+            this.RaisePropertyChanged("ValidationErrors");
+        }
+
+        public void ValidateReg()
+        {
+            this.ValidationErrors.Clear();
+            this.ValidateRegister();
             this.IsValid = this.ValidationErrors.IsValid;
             this.RaisePropertyChanged("IsValid");
             this.RaisePropertyChanged("ValidationErrors");

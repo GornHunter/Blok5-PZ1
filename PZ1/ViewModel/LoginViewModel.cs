@@ -11,11 +11,13 @@ namespace PZ1.ViewModel
     public class LoginViewModel : BindableBase
     {
         public MyICommand LoginCommand { get; set; }
+        public MyICommand RegisterCommand { get; set; }
         private LoginModel login = new LoginModel();
 
         public LoginViewModel()
         {
             LoginCommand = new MyICommand(OnLogin);
+            RegisterCommand = new MyICommand(OnRegister);
         }
 
         public LoginModel Login
@@ -31,6 +33,11 @@ namespace PZ1.ViewModel
         public void OnLogin()
         {
             Login.Validate();
+        }
+
+        public void OnRegister()
+        {
+            Login.ValidateReg();
         }
     }
 }

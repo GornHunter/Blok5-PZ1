@@ -18,7 +18,7 @@
         <Label Content="Hello there!" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="78,27,0,0" VerticalAlignment="Top" Width="142" Height="30" FontWeight="Bold" FontSize="16"/>
         <Label Content="Please log in" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="78,62,0,0" VerticalAlignment="Top" Width="142" Height="27" FontWeight="Bold"/>
         <Label Content="Don't have an account?" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="78,383,0,0" VerticalAlignment="Top" Width="142" Height="27" FontWeight="Bold"/>
-        <Button Content="Register" Background="#FF1D4593" HorizontalAlignment="Left" Margin="78,415,0,0" VerticalAlignment="Top" Width="142" Height="26" Foreground="White"/>
+        <Button Content="Register" Command="{Binding RegisterCommand}" Background="#FF1D4593" HorizontalAlignment="Left" Margin="78,415,0,0" VerticalAlignment="Top" Width="142" Height="26" Foreground="White"/>
         <TextBlock Text ="{Binding Login.ValidationErrors[Username]}" Foreground="Red" Margin="78,180,73.6,264.4" FontSize="9"/>
         <TextBlock Text ="{Binding Login.ValidationErrors[Password]}" Foreground="Red" Margin="78,267,73.6,177.4" FontSize="9"/>
     </Grid>
